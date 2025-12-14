@@ -14,10 +14,13 @@
 
   <body>
     <div class="taskbar">
-      <span class="taskbar-name">Patrick Noras</span>
-      <button class="dark-mode-toggle" id="darkModeBtn">
-        <i id="modeIcon" class="fas fa-moon"></i>
-      </button>
+      <div class="taskbar-inner">
+        <span class="taskbar-name">Patrick Noras</span>
+
+        <button class="dark-mode-toggle" id="darkModeBtn">
+          <i id="modeIcon" class="fas fa-moon"></i>
+        </button>
+      </div>
     </div>
     <div class="banner">
       <div class="profile-card">
@@ -26,7 +29,9 @@
           <p class="profile-occupation">MS CS Student @</p>
           <p class="profile-occupation">RPTU Kaiserslautern</p>
         </div>
-        <img class="profile-picture" src="images/pano.jpg" alt="profile picture">
+        <div class="profile-image-wrapper">
+          <img class="profile-picture" src="images/pano.jpg" alt="profile picture">
+        </div>
       </div>
     </div>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -88,7 +93,7 @@
 
         <!-- Featured Projects Section -->
         <section style="padding:0 0 0 16px;width:100%;max-width:800px;margin:32px auto 0 auto;">
-          <h2>Featured Projects</h2>
+          <h2 style="padding:0 0 15px 0">Featured Projects</h2>
           <div class="project-card">
             <img src="images/main_pipeline_v3.png"
             data-static="images/main_pipeline_v3.png"
