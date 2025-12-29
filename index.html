@@ -64,13 +64,13 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:100%;vertical-align:middle">
                 <p>
-    <h2>Biography</h2>
-		I'm a Masters's student in Computer Science at <a href="https://rptu.de/en">RPTU Kaiserslautern</a> specializing in 3D Computer Vision.
-    Alongside my studies, I work as a graduate research assistant at the <a href="https://www.dfki.de/en/web">German Research Center for Artificial Intelligence (DFKI)</a> in the Augmented Vision group under the supervision of <a href="https://av.dfki.de/members/stricker/">Prof. Didier Stricker</a>.
-    <br>
-    <br>
-    Prior to this, I completed my B.Sc. in Computer Science at <a href="https://rptu.de/en">RPTU Kaiserslautern</a>. During my studies, I was an undergraduate software developer at <a href="https://smartfactory.de/">SmartFactory KL</a> and a visiting graduate researcher at <a href="https://www.unc.edu/">UNC Chapel Hill </a>, where I worked under the mentorship of <a href="https://www.cs.unc.edu/~ronisen/">Prof. Roni Sengupta</a>, supported by a <span class="highlight">DAAD-PROMOS</span> scholarship.           
-  </p>
+                  <h2>Biography</h2>
+                  I'm a Masters's student in Computer Science at <a href="https://rptu.de/en">RPTU Kaiserslautern</a> specializing in 3D Computer Vision.
+                  Alongside my studies, I work as a graduate research assistant at the <a href="https://www.dfki.de/en/web">German Research Center for Artificial Intelligence (DFKI)</a> in the Augmented Vision group under the supervision of <a href="https://av.dfki.de/members/stricker/">Prof. Didier Stricker</a>.
+                  <br>
+                  <br>
+                  Prior to this, I completed my B.Sc. in Computer Science at <a href="https://rptu.de/en">RPTU Kaiserslautern</a>. During my studies, I was an undergraduate software developer at <a href="https://smartfactory.de/">SmartFactory KL</a> and a visiting graduate researcher at <a href="https://www.unc.edu/">UNC Chapel Hill </a>, where I worked under the mentorship of <a href="https://www.cs.unc.edu/~ronisen/">Prof. Roni Sengupta</a>, supported by a <span class="highlight">DAAD-PROMOS</span> scholarship.           
+                </p>
               </td>
             </tr>
           </tbody></table>
@@ -92,52 +92,98 @@
         <div class="separator"></div>
 
         <!-- Featured Projects Section -->
-        <section style="padding:0 0 0 16px;width:100%;max-width:800px;margin:32px auto 0 auto;">
+        <section>
           <h2 style="padding:0 0 15px 0">Featured Projects</h2>
-          <div class="project-card">
-            <img src="images/main_pipeline_v3.png"
-            data-static="images/main_pipeline_v3.png"
-            data-anim="images/rel_spheres_ours.gif" alt="GAINS: Gaussian-based Inverse Rendering from Sparse Multi-View Captures">
+
+          <div class="project-card" onmouseover="gains_start()" onmouseout="gains_stop()">
+            <div class="project-media">
+              <div class="project-video" id="gains_video">
+                <video muted autoplay loop playsinline>
+                  <source src="images/rel_spheres_ours.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <script type="text/javascript">
+                function gains_start() {
+                  document.getElementById("gains_video").style.opacity = "1";
+                }
+
+                function gains_stop() {
+                  document.getElementById("gains_video").style.opacity = "0";
+                }
+
+                gains_stop();
+              </script>
+              <img src="images/main_pipeline_v3.png" alt="GAINS">
+            </div>
             <div class="project-info">
               <h3>GAINS: Gaussian-based Inverse Rendering from Sparse Multi-View Captures</h3>
+
               <p>
-                <a href="" target="_blank">Patrick Noras</a>,
-                <a href="https://chedgekorea.github.io/" target="_blank">Jun Myeong Choi</a>,
-                <a href="https://av.dfki.de/members/stricker/" target="_blank">Didier Stricker</a>,
-                <a href="https://www.cs.wm.edu/~ppeers/" target="_blank">Pieter Peers</a>,
-                <a href="https://www.cs.unc.edu/~ronisen/" target="_blank">Roni Sengupta</a>
+                <a href="https://patrickbail.github.io/">Patrick Noras</a>,
+                <a href="https://chedgekorea.github.io/">Jun Myeong Choi</a>,
+                <a href="https://av.dfki.de/members/stricker/">Didier Stricker</a>,
+                <a href="https://www.cs.wm.edu/~ppeers/">Pieter Peers</a>,
+                <a href="https://www.cs.unc.edu/~ronisen/">Roni Sengupta</a>
               </p>
-              <div>
-                <a href="https://www.arxiv.org/abs/2512.09925" target="_blank">Paper</a>
-                <a href="https://patrickbail.github.io/gains/" target="_blank">Project</a>
+
+              <div class="project-links">
+                <a href="https://www.arxiv.org/abs/2512.09925">Paper</a>
+                <a href="https://patrickbail.github.io/gains/">Project</a>
               </div>
+
+              <p>GAINS is a Gaussian-based inverse rendering framework that uses learning-based priors to improve geometry and material recovery from sparse multi-view captures, achieving high-quality relighting and novel-view synthesis.</p>
             </div>
+        </div>
+
+          <div class="project-card" onmouseover="mono360_start()" onmouseout="mono360_stop()">
+              <div class="project-media">
+                <div class="project-video" id="mono360_video">
+                  <video muted autoplay loop playsinline>
+                    <source src="images/Mono360GS_dfki_showroom.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <script type="text/javascript">
+                  function mono360_start() {
+                    document.getElementById("mono360_video").style.opacity = "1";
+                  }
+
+                  function mono360_stop() {
+                    document.getElementById("mono360_video").style.opacity = "0";
+                  }
+                  mono360();
+                </script>
+                <img src="images/baseline_pipeline_1.png" alt="Monocular360° GS">
+              </div>
+              <div class="project-info">
+                <h3>Monocular360° GS</h3>
+
+                <div class="project-links">
+                  <a href="data/Mono360_GS.pdf">Presentation</a>
+                </div>
+
+                <p>This project introduces Monocular360° GS, a method for monocular panoramic image-based rendering that generates parallax through partial ground-truth views and uses inpainting to handle occlusions, achieving improved results on real-world scenes.</p>
+              </div>
           </div>
 
           <div class="project-card">
-            <img src="images/baseline_pipeline_1.png"
-     data-static="images/baseline_pipeline_1.png"
-     data-anim="images/Mono360GS_dfki_showroom.gif" alt="Mono360° GS">
-            <div class="project-info">
-              <h3>Monocular360° GS</h3>
-              <p>This project introduces Monocular360° GS, a method for monocular panoramic image-based rendering that generates parallax through partial ground-truth views and uses inpainting to handle occlusions, achieving improved results on real-world scenes.</p>
-              <div>
-                <a href="data/Mono360_GS.pdf" target="_blank">Presentation</a>
+              <div class="project-media">
+                <img src="images/teaser.png" alt="Bachelorthesis">
               </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="images/teaser.png" alt="Bachelor Thesis">
             <div class="project-info">
               <h3>Performance and Accuracy Assessment of Nvidia's Omniverse Isaac Sim for Generating Synthetic Data from Real-world Scenarios</h3>
-              <p>I created this project as part of my undergraduate thesis to evaluate NVIDIA's Omniverse Isaac Sim for generating realistic synthetic stereo-camera images and LiDAR point clouds by comparing simulated sensor data to a real-world scene.</p>
-              <div>
-                <a href="data/bachelorthesis_presentation.pdf" target="_blank">Presentation</a>
-                <a href="https://github.com/patrickbail/cubetower-dt.git" target="_blank">Code</a>
+
+              <div class="project-links">
+                <a href="data/bachelorthesis_presentation.pdf">Presentation</a>
+                <a href="https://github.com/patrickbail/cubetower-dt.git">Code</a>
               </div>
+
+              <p>I created this project as part of my undergraduate thesis to evaluate NVIDIA's Omniverse Isaac Sim for generating realistic synthetic stereo-camera images and LiDAR point clouds by comparing simulated sensor data to a real-world scene.</p>
+
             </div>
           </div>
+
         </section>
     
     <script>
@@ -175,22 +221,6 @@
         applyDarkMode(false);
       }
     })();
-    </script>
-    <script>
-    document.querySelectorAll('.project-card img').forEach(img => {
-      const staticSrc = img.getAttribute('data-static');
-      const animSrc = img.getAttribute('data-anim');
-
-      if (!animSrc) return;
-
-      img.addEventListener('mouseenter', () => {
-        img.src = animSrc;
-      });
-
-      img.addEventListener('mouseleave', () => {
-        img.src = staticSrc;
-      });
-    });
     </script>
   </body>
 </html>
